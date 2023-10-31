@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Title Page-->
-    <title>Registro Usuario</title>
+    <title>Iniciar Sesión Admin</title>
 
     <!-- Icons font CSS-->
     <link href="../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
@@ -32,12 +32,12 @@
         if(isset($_GET['mensaje'])) {
             // Si hay un mensaje en la URL, muéstralo usando SweetAlert
             echo "<script>
-                    Swal.fire({
-                    icon: 'success',
-                    title: '¡Éxito!',
-                    text: '{$_GET['mensaje']}',
-                    });
-                </script>";
+                Swal.fire({
+                icon: 'success',
+                title: '¡Éxito!',
+                text: '{$_GET['mensaje']}',
+                });
+            </script>";
         }
     ?>
     <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
@@ -56,32 +56,12 @@
                         <div class="p-t-10">
                             <input class="btn btn--pill btn--green" type="submit" value="Iniciar Sesión"></button>
                         </div>
-                        
-                        <p style="color: white;">¿No tienes una cuenta? <a href="html/crear_cuenta.html">Crea una</a></p>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">
-                    <a target="_blank" class="fcc-btn" href="https://christianvib.com/">christianvib</a>
-                </span>
-            </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-            </ul>
-        </footer>
-    </div>
+    
 
     <!-- Jquery JS-->
     <script src="vendor/jquery/jquery.min.js"></script>
