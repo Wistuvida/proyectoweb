@@ -3,10 +3,9 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Proyecto</title>
+    <title>Canciones</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="../css/style.css">
-    <title>menu</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
@@ -91,7 +90,7 @@
         <div class="container">
             <p>
                 <a style="color: white;" class="fcc-btn" href="inicio.php">Inicio</a>
-                <a style="color: white;" class="fcc-btn" href="blog.php">Blog</a>
+                <a style="color: white;" class="fcc-btn" href="acerca_de.php">Acerca De</a>
                 <a style="color: white;" class="fcc-btn" href="contacto.php">Contacto</a>
             </p>
         </div>

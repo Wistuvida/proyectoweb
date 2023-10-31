@@ -42,14 +42,16 @@ if ($resultado->num_rows > 0) {
                 echo "<embed src='".$video['link']."' type='application/pdf' width='100%' height='600px'/>";
             ?>
 
-            <form action="" method="POST">
-                <button type="input" class="btn btn-success" id="agregar_favorito" nmae="agregar_favorito" value="Agregar a favoritos">Agregar a favoritos</button>
+            <form action="../php/agregar_favorito.php" method="post">
+                <input type="hidden" name="id_video" value="<?php echo $video['id_video']; ?>"> 
+                
+                <input type="submit" class="btn btn-success" id="agregar_favorito" name="agregar_favorito" value="Agregar a Favoritos"> 
             </form>
         </div>
     
         <?php
         } else {
-            echo "No se encontró ninguna canción con ese ID.";
+            echo "No se encontró ningun PDF con ese ID.";
         }
 
         // Cerrar la conexión
@@ -60,7 +62,7 @@ if ($resultado->num_rows > 0) {
             <div class="container">
                 <p>
                     <a style="color: white;" class="fcc-btn" href="inicio.php">Inicio</a>
-                    <a style="color: white;" class="fcc-btn" href="blog.php">Blog</a>
+                    <a style="color: white;" class="fcc-btn" href="acerca_de.php">Acerca De</a>
                     <a style="color: white;" class="fcc-btn" href="contacto.php">Contacto</a>
                 </p>
             </div>

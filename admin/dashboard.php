@@ -21,7 +21,7 @@
                             if(isset($_SESSION['correo'])){
                                 echo $_SESSION['nombre'];
                             } else {
-                                header("Location: formulario_login.php");
+                                header("Location: index.php");
                                 exit();
                             }?>
                         </a>
@@ -30,7 +30,7 @@
                         <a class="nav-link" href="cancion.php">Agregar Tutorial</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ejercicio.php">Blog</a>
+                        <a class="nav-link" href="blog.php">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -59,17 +59,24 @@
                     
                     <thead>
                         <tr>
-                        <th scope="col">ID cancion</th>
-                        <th scope="col">Título</th>
-                        <th scope="col">Categoría</th>
+                            <th scope="col">ID cancion</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php while($fila = $resultado->fetch_assoc()): ?>
                         <tr>
-                            <th><?php echo $fila['id_video']; ?></th>
-                            <th><?php echo $fila['titulo']; ?></th>
-                            <th><?php echo $fila['categoria']; ?></th>
+                            <td><?php echo $fila['id_video']; ?></td>
+                            <td><?php echo $fila['titulo']; ?></td>
+                            <td><?php echo $fila['categoria']; ?></td>
+                            <td>
+                                <form action="php/eliminar_cancion.php" method="post" onsubmit="return confirm('¿Estás seguro de que quieres eliminar este contenido?')">
+                                    <input type="hidden" name="id_video" value="<?php echo $fila['id_video']; ?>">
+                                    <input type="submit" class="btn btn-danger" value="Eliminar Video">
+                                </form>
+                            </td>
                         </tr>
                         <?php endwhile; ?>
                     </tbody>
@@ -90,14 +97,21 @@
                         <th scope="col">ID cancion</th>
                         <th scope="col">Título</th>
                         <th scope="col">Categoría</th>
+                        <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php while($fila = $resultadoEjercicio->fetch_assoc()): ?>
                         <tr>
-                            <th><?php echo $fila['id_video']; ?></th>
-                            <th><?php echo $fila['titulo']; ?></th>
-                            <th><?php echo $fila['categoria']; ?></th>
+                            <td><?php echo $fila['id_video']; ?></td>
+                            <td><?php echo $fila['titulo']; ?></td>
+                            <td><?php echo $fila['categoria']; ?></td>
+                            <td>
+                                <form action="php/eliminar_cancion.php" method="post" onsubmit="return confirm('¿Estás seguro de que quieres eliminar este contenido?')">
+                                    <input type="hidden" name="id_video" value="<?php $fila['id_video']; ?>">
+                                    <input type="submit" class="btn btn-danger" value="Eliminar Video">
+                                </form>
+                            </td>
                         </tr>
                         <?php endwhile; ?>
                     </tbody>
@@ -115,18 +129,25 @@
                     
                     <thead>
                         <tr>
-                        <th scope="col">ID cancion</th>
-                        <th scope="col">Título</th>
-                        <th scope="col">Categoría</th>
+                            <th scope="col">ID cancion</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php while($fila = $resultadoPDF->fetch_assoc()): ?>
                         <tr>
-                            <th><?php echo $fila['id_video']; ?></th>
-                            <th><?php echo $fila['titulo']; ?></th>
-                            <th><?php echo $fila['categoria']; ?></th>
-                        </tr>
+                            <td><?php echo $fila['id_video']; ?></td>
+                            <td><?php echo $fila['titulo']; ?></td>
+                            <td><?php echo $fila['categoria']; ?></td>
+                            <td>
+                                <form action="php/eliminar_cancion.php" method="post" onsubmit="return confirm('¿Estás seguro de que quieres eliminar este contenido?')">
+                                    <input type="hidden" name="id_video" value="<?php $fila['id_video']; ?>">
+                                    <input type="submit" class="btn btn-danger" value="Eliminar Video">
+                                </form>
+                            </td>
+                        
                         <?php endwhile; ?>
                     </tbody>
                 </table>

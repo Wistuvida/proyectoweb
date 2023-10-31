@@ -1,7 +1,13 @@
 <?php
 // Conectar a la base de datos
 require_once('../php/conexion.php');
-
+session_start();
+if(isset($_SESSION['correo'])){
+    echo "<span style='color: white;'>Hola, " . $_SESSION['correo'] . "</span>";
+} else {
+    header("Location: ../index.php");
+    exit();
+}
 // Obtener el ID de la canción de la URL
 $id_video = $_GET['id'];
 
@@ -11,6 +17,7 @@ $resultado = $conexion->query($consulta);
 
 if ($resultado->num_rows > 0) {
     $video = $resultado->fetch_assoc();
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,8 +52,10 @@ if ($resultado->num_rows > 0) {
                 // ... y así sucesivamente para el resto de la información
             ?>
 
-            <form action="" method="POST">
-                <button type="input" class="btn btn-success" id="agregar_favorito" nmae="agregar_favorito" value="Agregar a favoritos">Agregar a favoritos</button>
+            <form action="../php/agregar_favorito.php" method="post">
+                <input type="hidden" name="id_video" value="<?php echo $video['id_video']; ?>"> 
+                
+                <input type="submit" class="btn btn-success" id="agregar_favorito" name="agregar_favorito" value="Agregar a Favoritos"> 
             </form>
         </div>
     
@@ -63,7 +72,7 @@ if ($resultado->num_rows > 0) {
             <div class="container">
                 <p>
                     <a style="color: white;" class="fcc-btn" href="inicio.php">Inicio</a>
-                    <a style="color: white;" class="fcc-btn" href="blog.php">Blog</a>
+                    <a style="color: white;" class="fcc-btn" href="acerca_de.php">Acerca De</a>
                     <a style="color: white;" class="fcc-btn" href="contacto.php">Contacto</a>
                 </p>
             </div>

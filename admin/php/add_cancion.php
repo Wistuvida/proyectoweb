@@ -22,7 +22,8 @@ if(isset($_SESSION['id_admin'])){
 
     // Ejecutar la consulta
     if ($conexion->query($consulta) === TRUE) {
-        echo "Video insertado correctamente";
+        echo "<script>alert('Información agregada correctamente')</script>";
+        header("Location: ../dashboard.php");
     } else {
         echo "Error al insertar el video: " . $conexion->error;
     }
