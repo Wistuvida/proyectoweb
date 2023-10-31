@@ -1,0 +1,247 @@
+/* .fuentes de Portada */
+   @import url("Proyecto/html/Portada.html"); 
+body {
+    background-image: url(guitarra.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+/* .fuentes de google */ 
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+   
+   
+}
+.container span {
+    font-size: 44pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Cooper Black";
+    coursor: pointer;
+    transition: all 300ms ease-in-out;
+
+}
+.container span::before {
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+
+}
+.container span::after{
+    content: var(--l);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+
+}
+.container span:hover{
+    filter: contrast(250%);
+}
+.container span:nth-child(1) {
+    color:#00bef8;
+}
+.container span:nth-child(2) {
+    color: #f82500;
+}
+.container span:nth-child(3) {
+    color:#ff0697;
+}
+.container span:nth-child(4) {
+    color:#ff4d00;
+}
+.container span:nth-child(5) {
+    color:#ffe800 ;
+}
+.container span:nth-child(6) {
+    color:#bb00ff;
+}
+.container span:nth-child(7) {
+    color:#00f87c ;
+}.container span:nth-child(8) {
+    color:#f80008;
+}.container span:nth-child(9) {
+    color:#9049c2;
+}.container span:nth-child(10) {
+    color:#00f83a;
+}.container span:nth-child(11) {
+    color:#e882e0;
+}.container span:nth-child(12) {
+    color:#ff0697;
+}.container span:nth-child(13) {
+    color:#3953e8;
+}.container span:nth-child(14) {
+    color:#ff4d00;
+}.container span:nth-child(15) {
+    color:#e63f6e;
+}
+.container span:nth-child(16) {
+    color:#e63fe3;
+}.container span:nth-child(17) {
+    color:#5e3fe6;
+}.container span:nth-child(18) {
+    color:#3fe66e;
+}
+/*Estilos para el encabezado*/
+.container .btn-menu, .logo{
+    float: left;
+    line-height: 70px;
+}
+.container .btn-menu label{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+.logo h1{
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 10px;
+}
+.container .menu{
+    float: right;
+    line-height: 70px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+    margin-right: 5px;
+    /*. . .*/
+
+}
+.container .menu a:hover{
+    border-bottom: 2px solid #c7c7c7;
+    padding-bottom: 5px;
+}
+/*Fin de Estilos para el encabezado*/
+
+/*Menù lateral*/
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+/* Fin de estilos para el encabezado*/
+
+/*Menu lateral*/
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0; left: 0;
+    transition: all 500ms ease; 
+    opacity: 0;  
+    visibility: hidden;
+
+}
+#btn-menu:checked ~ container-menu{
+    opacity: 0;  
+    visibility: visible;
+}
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    display: block;
+    text-decoration: nome;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+/*Fin de Menù material*/
+

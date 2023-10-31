@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="keywords" content="[[tags]]"/>
+<title>[[titulo]]</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./sclim/lim.css?5.6.4" type="text/css" ></link>
+<link rel="stylesheet" href="./sclim/lim-px.css?5.6.4" type="text/css" ></link>
+[[scorm]]
+<script src="./sclim/lang.js?5.6.4" type="text/javascript"></script>
+<script src="./sclim/limjs.js??5.6.4" type="text/javascript"></script>
+
+</head>
+<body >
+   <div class="pcllim" name='limbk' data-limc='[[conflim]]'>
+      <div class="pclpreload"></div>
+
+<div class="pclminbtn">
+<button class="pclbot-min lbt-infor" >i</button>   
+</div>
+
+   <div class="pclfondo"></div>
+   <div class="pclcorpo" >
+      <div class="pclsuper" >[[titulo]]</div>
+      <div class="pclsub"  ><div class="pclsubtx">[[subtitulo]]</div></div>
+      <div class="pclind">[[menu]]</div>
+      <div class="pclbase">
+	  <div name="limpax"  class="pclcont">
+	  {{paxinas}}
+         <!-- #[[numpaxina]] -->         
+            <div name="limpanel" data-limc='[[datpanel]]'>
+               <div name="limact" >[[htmlpanel]]</div>
+            </div> 
+	<!--  -->     
+	{{endpaxinas}}
+      </div>
+   </div>
+   </div>
+</div>
+</body>
+</html>

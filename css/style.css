@@ -1,0 +1,89 @@
+body {
+    background-image: url(../images/guitarra.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+/* .fuentes de google */ 
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+.container span {
+    font-size: 44pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Cooper Black";
+    coursor: pointer;
+    transition: all 300ms ease-in-out;
+
+}
+.container span::before {
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+
+}
+.container span::after{
+    content: var(--l);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+
+}
+.container span:hover{
+    filter: contrast(250%);
+}
+
+.container span:hover{
+    filter: contrast(250%);
+}
+.container span:nth-child(1) {
+    color:#00bef8;
+}
+.container span:nth-child(2) {
+    color: #f82500;
+}
+.container span:nth-child(3) {
+    color:#ff0697;
+}
+.container span:nth-child(4) {
+    color:#ff4d00;
+}
+.container span:nth-child(5) {
+    color:#ffe800 ;
+}
+.container span:nth-child(6) {
+    color:#bb00ff;
+}
+.container span:nth-child(7) {
+    color:#00f87c ;
+}.container span:nth-child(8) {
+    color:#f80008;
+}.container span:nth-child(9) {
+    color:#9049c2;
+}.container span:nth-child(10) {
+    color:#00f83a;
+}.container span:nth-child(11) {
+    color:#e882e0;
+}.container span:nth-child(12) {
+    color:#ff0697;
+}.container span:nth-child(13) {
+    color:#3953e8;
+}.container span:nth-child(14) {
+    color:#ff4d00;
+}.container span:nth-child(15) {
+    color:#e63f6e;
+}
+.container span:nth-child(16) {
+    color:#e63fe3;
+}.container span:nth-child(17) {
+    color:#5e3fe6;
+}.container span:nth-child(18) {
+    color:#3fe66e;
+}
+
+
