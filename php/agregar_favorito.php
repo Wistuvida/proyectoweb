@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $consulta = "INSERT INTO lista_favoritos (video_id_video,	video_admin_id_admin, usuario_id_usuario) VALUES ($id_video, $id_admin, $id_usuario)";
     // // Ejecutar la consulta
     if ($conexion->query($consulta) === TRUE) {
-        echo "Video agregado a favoritos correctamente";
+        header("location: ../html/Inicio.php");
     } else {
         echo "Error al agregar el video a favoritos: " . $conexion->error;
     }

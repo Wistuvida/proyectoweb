@@ -29,9 +29,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="cancion.php">Agregar Tutorial</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.php">Blog</a>
-                    </li>
+
                 </ul>
             </div>
         </div>

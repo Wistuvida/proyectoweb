@@ -91,7 +91,7 @@
         <div class="container">
             <p>
                 <a style="color: white;" class="fcc-btn" href="inicio.php">Inicio</a>
-                <a style="color: white;" class="fcc-btn" href="blog.php">Blog</a>
+                <a style="color: white;" class="fcc-btn" href="acerca_de.php">Acerca De</a>
                 <a style="color: white;" class="fcc-btn" href="contacto.php">Contacto</a>
             </p>
         </div>
